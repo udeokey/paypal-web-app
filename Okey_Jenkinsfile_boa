@@ -14,7 +14,7 @@ node{
     //sh "${mavenHome}/bin/mvn deploy"
   }
       stage('6.Deploy2dev'){
-      deploy adapters: [tomcat9(credentialsId: 'Tomcat_Credentials', path: '', url: 'http://18.207.210.70:8080/')], contextPath: null, war: 'target/web-app.war'
+      //deploy adapters: [tomcat9(credentialsId: 'Tomcat_Credentials', path: '', url: 'http://18.207.210.70:8080/')], contextPath: null, war: 'target/web-app.war'
 }
       stage('5.Deploy2uat'){
         sshagent(['agentcredentials']) {
